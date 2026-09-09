@@ -1,11 +1,11 @@
-age = int(input("Enter your age: "))
+# Reverse a Number 
+num = int(input("Enter number to reverse "))
+num1 = 0
+div = 0 
+rev = 0 
+while(num > 0):
+  num1 = num%10
+  rev = rev*10+num1
+  num = num//10
 
-if age >= 18:
-    citizenship = input("Are you a citizen? (yes/no): ")
-
-    if citizenship == "yes":
-        print("You are eligible to vote.")
-    else:
-        print("You are not eligible to vote.")
-else:
-    print("You are under 18.")
+print("The Reverse of Number is ",rev)
