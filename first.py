@@ -1,20 +1,11 @@
-day = int(input("Enter day number: "))
+age = int(input("Enter your age: "))
 
-match day:
-    case 1:
-        print("Monday")
-    case 2:
-        print("Tuesday")
-    case 3:
-        print("Wednesday")
-    case 4:
-        print("Thursday")
-    case 5:
-        print("Friday")
-    case 6:
-        print("Saturday")
-    case 7:
-        print("Sunday")
-    case _:
-        print("Invalid day")
+if age >= 18:
+    citizenship = input("Are you a citizen? (yes/no): ")
 
+    if citizenship == "yes":
+        print("You are eligible to vote.")
+    else:
+        print("You are not eligible to vote.")
+else:
+    print("You are under 18.")
