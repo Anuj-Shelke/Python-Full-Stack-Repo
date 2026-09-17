@@ -1,20 +1,16 @@
 # #Code to print this Star Pattern 
-# *
-# **
-# ***
-# ****
+
 # *****
-# ******
-# *****
-# ****
-# ***
-# **
-# *
-for row in range(1,6):
-    print("*"*row)
-for row in range(6,0,-1):
-    print("*"*row)
-    
+#  ****
+#   ***
+#    **
+#     * 
+j = 1
+for i in range(5,0,-1):
+    print("*"*i)
+
+    print(" "*(j),end="")
+    j+=1
 
 
     
