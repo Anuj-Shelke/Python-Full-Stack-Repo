@@ -1,14 +1,16 @@
-#Code to Print fabonnaci Series using loop 
-i = 0; 
-first = 0
-second = 1
-next = 0
-while(i<10):
-     print(first)
-     next = first+second
-     first = second 
-     second = next 
+#Code to Check if a number is a perfect Number 
+i =1
+sum = 0
+num = int(input("Enter number to check"))
+while(i <=num/2):
+    if(num%i==0):
+        sum = i+sum
+    i+=1
+print(sum)
+if(sum == num):
+    print("The number is a perfect Number ")
+else: 
+    print("The number is not a perfect Number ")
+
     
-     i+=1
-     
 
