@@ -1,15 +1,22 @@
-#Code to check if a number is a neon number 
-#A number is a neon number when sum of its digits square is equal to the number itself 
+#Code to check if a number is a Strong number 
+#Number is a strong number if sum of its factor is number itself eg 145 
+num = 145
+temp = num
+fact = 1
+sum =0 
+while(num >0):
+    mod  = num%10
+    fact = 1
+    for i in range(mod,0,-1): 
+      fact = fact*i
+      
+    sum = sum+fact
+    num = num//10
 
-num = int(input("Enter number to check "))
-square = num**2
-sum = 0
-while(square > 0):
-    sum = square%10+sum
-    square = square//10
-if(num == sum):
-    print("The number is a neon number ")
-else: 
-    print("The number is not a neon number ")
 
+if(sum == temp):
+   print("The number is a strong number ")
+else : 
+   print("not a strong num")
+  
 
