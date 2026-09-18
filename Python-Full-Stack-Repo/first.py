@@ -1,16 +1,25 @@
-#Code to print This pattern using both while loop 
-# * * * * 
-# * * * * 
-# * * * * 
-# * * * * 
-row = 0  
-coln = 0 
+#Code to print Right Angle Triangle 
+n = 4 
+i = 1 
+while i < n+1: 
+    k = 1
+    while k< n-1: 
+        print(" ",end="")
+        k+=1
+    j=1
+    while(j<=i): 
+        print("*",end="")
+        j+=1
+    print()
+    i+=1 
+#Same using for loop 
 
-while(row<4): 
-   print("*",end=" ")
-   coln = 1 
-   while(coln<4):
-      print("*",end=" ")
-      coln+=1
-   print()
-   row+=1
+
+for i in range(1,n+1):
+    print(" "*(n-i)+("*"*i))
+
+
+
+    
+
+
