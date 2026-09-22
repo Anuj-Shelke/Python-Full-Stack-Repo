@@ -1,3 +1,5 @@
-print("Q1. Count how many words are there in x")
-x = "Hi I am python"
-print(x.split); 
+ip = int(input("Enter number of element "))
+# for i in range(ip):
+#     ele = int(input("Enter Element : "))
+#     x.append(ele)
+# print(x)
