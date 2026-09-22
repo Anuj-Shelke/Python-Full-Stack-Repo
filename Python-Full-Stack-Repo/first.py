@@ -1,25 +1,32 @@
-print("Answer For question One")
-x = "education"
-for char in x :
-    if(char in 'aeiouAEIOU' ):
-    
-     print(char)
-
-print("Answer for Question Two ")
 count = 0 
-x = "maharashtra"
-for char in x:
-    if(char=="a"):
-        count+=1 
+print("Q1. Count how many words are there in x")
+x = "Hi I am python"
+y = x.split(" ")
+for char in y:
+    count+=1 
 print(count)
 
+print('Q.2 "Python is easy" Print in Reverse way ')
+z = "Python is easy"
+w = z.split(" ")
+print(sorted( w,reverse = True))
 
-print("Answer for Question three")
-x = "maharashtra"
-for char in x:
-    if(char=="a"):
-        char = "x" 
-    print(char,end="")
+
+print("Q.3 How r u ----> Find Largerst Word ")
+b = "How r u"
+a = b.split(" ")
+largest_word = max(a, key = len)
+print("largest word is : ",largest_word);
+
+
+
+
+print("Q.4 Check string ends with a or not ===> maharashtra ")
+v = "maharashtra"
+print(v.endswith("a"))
+
+
+
 
         
         
