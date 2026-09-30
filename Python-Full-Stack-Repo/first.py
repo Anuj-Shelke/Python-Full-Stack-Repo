@@ -1,52 +1,55 @@
-#Methods of Tupple 
-tup = (1,2,3,4,5)
-print(tup.count(5)) #Count the occurance of given input element 
-print(tup.index(3)) #Returns the index of the input element 
-li = [1,2,3,4]
-tup1 = (li,23,4,5,6) #We can make a tupple mutable by adding a list to it 
-li.append(5)
-print(tup1)
+dict = { "maruti" : 30000, 
+        "Tata" : 3000000,
+        "Toyota" : 340000,
+        "Honda" : 400000,
+        "Hyundai": 500000,
+        "Mistbushi" : 50000,
+        "Chevorlet" : 6000000,
+        "Renault" : 400000000,
+        "Porshe" : 444444444,
+}
+print(dict)
 
-#Printing tup using for loop 
-for i in tup1: 
-    print(i)
-student =[]
-j = 0 ; 
-for i in range(1,4):
-    i = input("Enter marks"); 
-    student.insert(j,i)
-    print(list)
-    j+=1 
-student = (
-    ("amit",70,80,90),
-    ("Ajay",67,77,99),
-    ("Mahesh",100,100,99)
-)
+for i in dict: 
+    print(dict.get(i))
 
-student = []
-i = int(input("Enter number of users ")); 
-k  = 1
+#Functions of a dictionary 
+print(len(dict),min(dict),max(dict))
+print(sorted(dict))
+print(sorted(dict,reverse= True))
 
-p = 1 
-for j in range(0,i):
-    
-    name = input("Enter name of user "); 
-    student.append(name)
-    k+=1
-    print("Enter marks of  3 subjects "); 
-    m1 = int(input("English : "))
-    student.append(m1)
-    m2 = int(input("Maths : "))
-    student.append(m2)
-    m3 = int(input("Marathi : "))
-    student.append(m3)
-   
+#Methods of Dictionary 
+dict.update({"BMW":200})
+dict.update({"Renault":100})
+print(dict)
 
-    for i in student: 
-        total = m1+m2+m3
-    
-print("total of ",i,"is ",total)
+#Methods to delete 1.Pop 2.Popitem 3.Clear
+dict.pop("Porshe")
+dict.popitem()
+# dict.clear()
 
-print(student)
-    
+print(dict.keys()) #to get only keys 
+print(dict.values()) #to get only values 
+print(dict.items()) # to get both key and value 
 
+for keys in dict: 
+    print(keys)
+
+for c in dict.values(): 
+    print(c)
+
+for item in dict.items(): 
+    print(item)
+total = 0 
+for i in dict : 
+    total += dict.get(i)
+print("total is :",total)
+
+list =[]
+for item in dict.values():
+    list.append(item); 
+
+print(max(list))
+
+
+         
