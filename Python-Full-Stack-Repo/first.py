@@ -1,55 +1,71 @@
-dict = { "maruti" : 30000, 
-        "Tata" : 3000000,
-        "Toyota" : 340000,
-        "Honda" : 400000,
-        "Hyundai": 500000,
-        "Mistbushi" : 50000,
-        "Chevorlet" : 6000000,
-        "Renault" : 400000000,
-        "Porshe" : 444444444,
+
+menu = {
+    1: {
+        "Starters": {
+            1: "Manchurian",
+            2: "Paneer Tikka",
+            3: "French Fries"
+        }
+    },
+
+    2: {
+        "Main Course": {
+            1: "Paneer Masala",
+            2: "Veg Biryani",
+            3: "Dal Tadka"
+        }
+    },
+
+    3: {
+        "Desserts": {
+            1: "Gulab Jamun",
+            2: "Ice Cream",
+            3: "Brownie"
+        }
+    }
 }
-print(dict)
-
-for i in dict: 
-    print(dict.get(i))
-
-#Functions of a dictionary 
-print(len(dict),min(dict),max(dict))
-print(sorted(dict))
-print(sorted(dict,reverse= True))
-
-#Methods of Dictionary 
-dict.update({"BMW":200})
-dict.update({"Renault":100})
-print(dict)
-
-#Methods to delete 1.Pop 2.Popitem 3.Clear
-dict.pop("Porshe")
-dict.popitem()
-# dict.clear()
-
-print(dict.keys()) #to get only keys 
-print(dict.values()) #to get only values 
-print(dict.items()) # to get both key and value 
-
-for keys in dict: 
-    print(keys)
-
-for c in dict.values(): 
-    print(c)
-
-for item in dict.items(): 
-    print(item)
-total = 0 
-for i in dict : 
-    total += dict.get(i)
-print("total is :",total)
-
-list =[]
-for item in dict.values():
-    list.append(item); 
-
-print(max(list))
 
 
-         
+order = []
+
+while True:
+
+    print("\n1. Starters")
+    print("2. Main Course")
+    print("3. Desserts")
+    print("4. View Order")
+    print("5. Exit")
+
+    choice = int(input("Enter your choice: "))
+
+    if choice == 5:
+        break
+
+    elif choice == 4:
+        print("\nYour Order:")
+
+        for item in order:
+            print(item)
+
+    elif choice in menu:
+
+        category = menu[choice]
+
+        for name, items in category.items():
+
+            print("\n", name)
+
+            for number, item in items.items():
+                print(number, item)
+
+            item_choice = int(input("Enter item number: "))
+
+            if item_choice in items:
+                order.append(items[item_choice])
+                print("Item added!")
+            else:
+                print("Invalid item!")
+
+    else:
+        print("Invalid choice!")
+
