@@ -1,8 +1,10 @@
-class Employee: 
-    def __init__(self, name, age):
+class Product: 
+    def __init__(self, id,name,price,qty):
+        self.__id = id 
         self.__name = name
-        self.__age = age 
-
+        self.__price = price 
+        self.__qty = qty
+        
     @property
     def name(self):
         return self.__name
@@ -12,20 +14,33 @@ class Employee:
         self.__name = name 
 
     @property
-    def age(self):
-        return self.__age  
+    def  id(self):
+        return self.__id  
 
-    @age.setter
-    def age(self, age):
-        self.__age = age    
+    @id.setter
+    def id(self, id):
+        self.__id= id    
 
-e1 = Employee("Anuj", 38)
+    @property
+    def price(self):
+        return self.__price
 
-print("Name:", e1.name)
-print("Age:", e1.age)
+    @price.setter
+    def price(self,price):
+        self.__price = price
 
-e1.name = "Shelke"
-e1.age = 40
+    @property
+    def qty(self):
+        return self.__qty
 
-print("Updated Name:", e1.name)
-print("Updated Age:", e1.age)
+    @qty.setter
+    def qty(self,qty):
+        self.__qty = qty
+
+p1 = Product(1,"Bottle",20,1)
+
+print("Id",p1.id)
+print("Name:", p1.name)
+print("Price:", p1.price)
+print("Qty",p1.qty)
+
